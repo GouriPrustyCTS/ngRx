@@ -1,0 +1,14 @@
+ngRx
+
+state -> data which gets changed over time/user actions
+before this we were using @input to pass data or by creating injectable service
+
+steps : 
+install ng add @ngrx/store
+create store -> provideStore({counters...})
+create state -> counter state
+actions -> events that calls the reducer() -> naming the actions and sending payload
+reducer -> contians filter / logic to change data -> main logic to change data
+define selectors 
+effects -> side effects that should occur side by side hen action is dispatched (eg: sending HTTP req.)
+using values in the component -> this.count$ = this.store.select(selectCount);
