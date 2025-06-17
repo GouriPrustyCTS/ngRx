@@ -8,5 +8,11 @@ export interface CounterState {
     reason: 'Hiii'
   };
 
+  export interface NameState{
+    name:string
+  }
+
+  export const initialNameState: NameState = {
+    name: 'Angular'}
 
   

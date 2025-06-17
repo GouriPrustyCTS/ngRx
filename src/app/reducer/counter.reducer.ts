@@ -1,7 +1,7 @@
 
 import { createReducer, on } from '@ngrx/store';
-import { increment, decrement, reset } from '../action/counter.action';
-import { initialState } from '../state/counter.state';
+import { increment, decrement, reset, setName } from '../action/counter.action';
+import { initialNameState, initialState } from '../state/counter.state';
 
 export const counterReducer = createReducer(
   initialState, // The initial state for this reducer
@@ -12,3 +12,8 @@ export const counterReducer = createReducer(
 
   on(reset, (state) => ({ ...state, count: 0, reason: 'Reset action triggered' }))
 );
+
+export const nameReducer = createReducer(
+  initialNameState,
+  on(setName,(state)=>({...state,name:"Bunty"}))
+)
